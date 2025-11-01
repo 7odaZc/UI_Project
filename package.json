@@ -1,0 +1,18 @@
+{
+  "name": "moneystraight",
+  "version": "1.0.0",
+  "description": "MoneyStraight - a personal finance tracker with linked accounts and clean dashboard UI.",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/styles.css -o ./dist/output.css --watch",
+    "build": "npx tailwindcss -i ./src/styles.css -o ./dist/output.css --minify",
+    "start": "npx serve dist"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/container-queries": "^0.1.0"
+  }
+}

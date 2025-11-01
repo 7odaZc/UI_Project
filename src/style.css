@@ -1,0 +1,102 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+
+body {
+  @apply font-display;
+  background-color: #122118; /* dark mode */
+  color: #ffffff;
+}
+
+/* Sidebar */
+aside {
+  @apply flex flex-col justify-between h-screen w-64 border-r border-white/10 bg-[#122118] p-4;
+}
+
+/* Sidebar hover states */
+aside a:hover {
+  @apply bg-[#264532] text-white transition-colors duration-200;
+}
+
+/* -----------------------------------
+   Avatar / Logo tiles
+-------------------------------------- */
+.user-avatar {
+  background-image: url("./assets/user-placeholder.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 9999px;
+}
+
+/* Shared logo tile behavior */
+.logo-tile {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Bank / Card Logos */
+.logo-chase {
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd9tPoDo6xm0QfxnLh8DWNqJ3IIGzlZm64qcGQbbUX8RuyfZksF_ONDZ1mvcVmsq4X2_cw6N06W2yK79yxeGPoBdoIaas-pFAl7UPajeEEvFcZS2eKy5syx-lCCSHzOZ2XYQNa0PhIUySPQb099q-gCgBTp8Yqev_YYb6-iup8-JedZhNxIIHpv-aHCVO76PRh1kaagXjZwZV3G5AIyDsdEZ1ig4SMsi8wyz7s0SvRSsLeWSu3bC6OBwUOQTHEzmEhj2Y_7gVfdQWC");
+}
+
+.logo-amex {
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIJ88GH1VD68nD7cpnsSz7wuPlJJZxEqt7U8O0W51fFUOIkDdE657I33oU-QRSbJTuei-SrrffZuGt1OPfKJo-bSalrf4R1p8tFnw3-nuX4qQNhY1pAVX9k7DZ9ZFLaAvsDMvZO7J-0-niIZvIzwFCBjaHq4NXxEnXJEPMpp060NVRES54uwrBIXmDREBnDPqND0En3fGsReV_aGGL7y88QHQus6kv8oPZ1QBt2rvXhYLyBaO1_rtPScqHE9s82c1XbkJevjczTkR8");
+}
+
+.logo-bofa {
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAj3Nt5P78luaY-5mMpswX2a9E--XpirjgUy5wEvBZvnVqdLPsFhzmEZN0ite2TPmeRDUHEPwGfyoaU-C7kWG-I7BArR-NmZjMYiVyQc_xoL7JhDT3Z5LAuSWQ5EusGX0QR-o4asmlpaCZ1F2NUPp2d0dyr_DEPreFsq-0fffi8kNWbpvOvpQrYybFNQ-ToauGlDAZuKYDoGdRCuQmIP3e2ok6qPynR53suI9yD741hYsy2sK1rfrwMhzMHHT_KQOLj36-K7hoFPtfG");
+}
+
+.logo-fidelity {
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5qQntrh9WkIdT8CJoIIxrw8CRxkbsKerT5gUqkREUnXEc2riLu4ALZ-MHb5tNKmcActiTnO_yI7JC45p0xDhwu-pDhPyWp9GrdRevzl7DtMijoJybx5kYfx-Ho8lH8cVv77lRxb3pvAZSGXoPE9KKMWOrjl85UqTiXfEXoMi6ifEKKFecL_9tn3pzk40cHBQlVOiNuoeh3v7J_ViwlDH8b-wcc-jSFrka6QzrPvOfrRulgxRbze5BV_kaVGG8r5OZW6kNBATDLNvd");
+}
+
+
+input::placeholder {
+  color: #96c5a9;
+}
+
+
+.account-item {
+  @apply flex items-center gap-4 bg-[#1a3325] hover:bg-[#264532] transition-colors duration-200 px-4 min-h-[72px] py-3 justify-between rounded-lg;
+}
+
+
+button {
+  @apply transition-colors duration-200;
+}
+
+/* Add Account button */
+.add-account-btn {
+  @apply flex min-w-[84px] items-center justify-center gap-2 overflow-hidden rounded-lg h-11 px-5 bg-primary text-[#122118] text-sm font-bold leading-normal tracking-wide hover:bg-primary/90;
+}
+
+/* -----------------------------------
+   Dark Mode tweaks (if used)
+-------------------------------------- */
+.dark body {
+  background-color: #122118;
+}
+
+.logo {
+  background-image: url("./assets/logo-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* keeps proportions */
+  width: 120px; /* adjust as needed */
+  height: 60px; /* adjust as needed */
+  display: block;
+  margin: 0 auto; /* centers horizontally */
+}
