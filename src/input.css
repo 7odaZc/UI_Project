@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom fonts or overrides */
+body {
+  @apply font-display bg-background-dark text-green-50;
+}
