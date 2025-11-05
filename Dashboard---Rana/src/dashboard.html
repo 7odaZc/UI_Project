@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Financial Dashboard</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link rel="stylesheet" href="./style.css" />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#449673",
+              "background-light": "#f3f4f6",
+              "background-dark": "#0a2e21",
+            },
+            fontFamily: { display: ["Lexend","sans-serif"] },
+            borderRadius: { DEFAULT: "0.75rem" },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-white">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white dark:bg-[#113c2d] p-6 flex flex-col">
+        <div class="flex items-center justify-center mb-10">
+          <img src="./assets/logo 1.png" alt="Logo" class="sidebar-logo" />
+        </div>
+
+        <nav class="flex flex-col space-y-2">
+          <a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/20 text-primary dark:text-white dark:bg-primary" href="#">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Dashboard</span>
+          </a>
+          <a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-primary/50" href="#">
+            <span class="material-symbols-outlined">receipt_long</span>
+            <span>Transactions</span>
+          </a>
+          <a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-primary/50" href="#">
+            <span class="material-symbols-outlined">account_balance</span>
+            <span>Accounts</span>
+          </a>
+          <a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-primary/50" href="#">
+            <span class="material-symbols-outlined">category</span>
+            <span>Categories</span>
+          </a>
+        </nav>
+
+        <div class="mt-auto">
+          <a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-primary/50" href="#">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Settings</span>
+          </a>
+          <a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-primary/50" href="#">
+            <span class="material-symbols-outlined">logout</span>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="flex-1 p-8 overflow-y-auto">
+        <header class="flex justify-between items-center mb-8">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Dashboard</h2>
+            <p class="text-gray-500 dark:text-gray-300">Welcome back, here's your financial overview.</p>
+          </div>
+          <button class="bg-primary text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-opacity-90 transition-colors">
+            <span class="material-symbols-outlined">add</span>
+            New Transaction
+          </button>
+        </header>
+
+        <!-- KPI Cards (3) -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white dark:bg-[#113c2d] p-6 rounded-lg shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-sm font-medium text-gray-500 dark:text-gray-300">Total Income</h3>
+              <span class="material-symbols-outlined text-white">arrow_upward</span>
+            </div>
+            <p class="text-3xl font-bold text-gray-900 dark:text-white">$12,450.00</p>
+          </div>
+
+          <div class="bg-white dark:bg-[#113c2d] p-6 rounded-lg shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-sm font-medium text-gray-500 dark:text-gray-300">Total Expenses</h3>
+              <span class="material-symbols-outlined text-white">arrow_downward</span>
+            </div>
+            <p class="text-3xl font-bold text-gray-900 dark:text-white">$7,890.50</p>
+          </div>
+
+          <div class="bg-white dark:bg-[#113c2d] p-6 rounded-lg shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-sm font-medium text-gray-500 dark:text-gray-300">Balance</h3>
+              <span class="material-symbols-outlined text-white">account_balance_wallet</span>
+            </div>
+            <p class="text-3xl font-bold text-gray-900 dark:text-white">$4,559.50</p>
+          </div>
+        </section>
+
+        <!-- Charts + Placeholders -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          <!-- Visible Chart #1 (Pie) -->
+          <div class="bg-white dark:bg-[#113c2d] p-6 rounded-lg shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Expense Categories</h3>
+            <div class="flex items-center justify-center h-64 bg-gray-100 dark:bg-[#194b39] rounded-lg">
+              <svg class="w-48 h-48 text-primary" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Pie chart placeholder">
+                <circle class="text-white/20" cx="100" cy="100" r="80" stroke="currentColor" stroke-width="20" stroke-linecap="round"/>
+                <circle class="text-white"    cx="100" cy="100" r="80" stroke="currentColor" stroke-width="20" stroke-linecap="round"
+                        transform="rotate(-90 100 100)" stroke-dasharray="251.2" stroke-dashoffset="35"/>
+                <text class="fill-current text-white font-bold text-2xl" x="100" y="105" text-anchor="middle">Pie</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Visible Chart #2 (Bar) -->
+          <div class="bg-white dark:bg-[#113c2d] p-6 rounded-lg shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Monthly Overview</h3>
+            <div class="flex items-center justify-center h-64 bg-gray-100 dark:bg-[#194b39] rounded-lg">
+              <svg class="w-full h-full p-4 text-primary" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bar chart placeholder">
+                <rect class="fill-current text-white/30" x="10" y="20" width="10" height="30" rx="1"/>
+                <rect class="fill-current text-white"    x="30" y="10" width="10" height="40" rx="1"/>
+                <rect class="fill-current text-white/30" x="50" y="30" width="10" height="20" rx="1"/>
+                <rect class="fill-current text-white"    x="70" y="5"  width="10" height="45" rx="1"/>
+                <line class="stroke-current text-white/20" x1="0" y1="50" x2="100" y2="50" stroke-width="1"/>
+                <text class="fill-current text-white font-bold text-lg" x="50" y="28" text-anchor="middle">Bar</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Placeholder: Loading (static skeleton block) -->
+          <div class="bg-white dark:bg-[#113c2d] p-6 rounded-lg shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Spending by Merchant (Loading)</h3>
+            <div class="h-64 rounded-lg overflow-hidden">
+              <div class="h-full w-full bg-gray-100 dark:bg-[#194b39] flex flex-col gap-3 p-4">
+                <div class="h-6 w-40 rounded bg-white/30 animate-pulse"></div>
+                <div class="flex-1 rounded bg-white/10 animate-pulse"></div>
+                <div class="h-4 w-24 rounded bg-white/20 animate-pulse"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Placeholder: Empty State (static block) -->
+          <div class="bg-white dark:bg-[#113c2d] p-6 rounded-lg shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Cashflow (No Data Yet)</h3>
+            <div class="h-64 rounded-lg border border-dashed border-white/20 flex flex-col items-center justify-center text-center bg-gray-50/40 dark:bg-[#194b39]/40">
+              <span class="material-symbols-outlined mb-2">insights</span>
+              <p class="text-sm text-gray-600 dark:text-gray-300">No data to display yet.</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">This placeholder reserves space for a future chart.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

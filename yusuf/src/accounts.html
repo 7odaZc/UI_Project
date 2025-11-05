@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accounts — Money$tr∞</title>
+
+  <!-- Tailwind & Fonts -->
+  <link rel="stylesheet" href="../dist/output.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+
+<body class="bg-[#082D23] font-display text-[#BDEED0] flex min-h-screen">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-[#0C3A2C] p-6 flex flex-col justify-between">
+    <div>
+      <div class="flex items-center gap-2 mb-10">
+        <img src="./logo 1.png" alt="Logo" class="h-8" />
+      </div>
+
+      <nav class="flex flex-col space-y-2 text-sm">
+        <a href="#" class="flex items-center gap-3 px-4 py-2 rounded-lg text-[#BDEED0] hover:bg-[#1E5E4A]">
+          <span class="material-symbols-outlined text-lg">dashboard</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-2 rounded-lg text-[#BDEED0] hover:bg-[#1E5E4A]">
+          <span class="material-symbols-outlined text-lg">receipt_long</span>
+          <span>Transactions</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#1E5E4A] text-white">
+          <span class="material-symbols-outlined text-lg">account_balance</span>
+          <span>Accounts</span>
+        </a>
+        <a href="./categories.html" class="flex items-center gap-3 px-4 py-2 rounded-lg text-[#BDEED0] hover:bg-[#1E5E4A]">
+          <span class="material-symbols-outlined text-lg">category</span>
+          <span>Categories</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-2 rounded-lg text-[#BDEED0] hover:bg-[#1E5E4A]">
+          <span class="material-symbols-outlined text-lg">settings</span>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="mt-auto">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-[#1E5E4A]"></div>
+        <div>
+          <p class="font-semibold text-white text-sm">Alex Green</p>
+          <p class="text-xs text-[#BDEED0]">alex.green@example.com</p>
+        </div>
+      </div>
+
+      <button class="mt-4 flex items-center gap-2 px-4 py-2 rounded-lg text-sm text-[#BDEED0] hover:bg-[#1E5E4A]">
+        <span class="material-symbols-outlined text-lg">logout</span>
+        <span>Log Out</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="flex-1 p-10">
+    <div class="flex items-center justify-between">
+      <h1 class="text-3xl font-bold text-white">Accounts</h1>
+      <button class="bg-[#49B784] text-white px-4 py-2 rounded-lg hover:bg-[#358E6A] flex items-center gap-2">
+        <span class="material-symbols-outlined text-sm">add</span>
+        Add New Account
+      </button>
+    </div>
+
+    <p class="text-sm mt-2 text-[#BDEED0]/80">Manage your linked financial accounts</p>
+
+    <div class="mt-6">
+      <input type="text" placeholder="Search for a specific account..." class="w-full bg-[#1E5E4A] border border-[#358E6A] rounded-lg p-2 text-white placeholder-[#BDEED0]/50 focus:outline-none focus:ring-2 focus:ring-[#49B784]">
+    </div>
+
+    <div class="mt-6 space-y-3">
+      <div class="bg-[#0C3A2C] border border-[#1E5E4A] rounded-lg p-4 flex justify-between items-center">
+        <div>
+          <p class="font-semibold">Chase Checking</p>
+          <p class="text-sm text-[#BDEED0]/80">Checking ••••1234</p>
+        </div>
+        <p class="font-semibold">$12,450.78</p>
+      </div>
+
+      <div class="bg-[#0C3A2C] border border-[#1E5E4A] rounded-lg p-4 flex justify-between items-center">
+        <div>
+          <p class="font-semibold">Amex Gold Card</p>
+          <p class="text-sm text-[#BDEED0]/80">Credit Card ••••5678</p>
+        </div>
+        <p class="font-semibold text-red-400">- $1,234.56</p>
+      </div>
+
+      <div class="bg-[#0C3A2C] border border-[#1E5E4A] rounded-lg p-4 flex justify-between items-center">
+        <div>
+          <p class="font-semibold">BoFA Savings</p>
+          <p class="text-sm text-[#BDEED0]/80">Savings ••••9012</p>
+        </div>
+        <p class="font-semibold">$58,210.00</p>
+      </div>
+
+      <div class="bg-[#0C3A2C] border border-[#1E5E4A] rounded-lg p-4 flex justify-between items-center">
+        <div>
+          <p class="font-semibold">Fidelity Roth IRA</p>
+          <p class="text-sm text-[#BDEED0]/80">Investment</p>
+        </div>
+        <p class="font-semibold">$25,678.90</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
