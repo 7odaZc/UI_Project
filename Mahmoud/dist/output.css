@@ -1053,12 +1053,20 @@ button,
   height: 3rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-24 {
   height: 6rem;
 }
 
-.h-28 {
-  height: 7rem;
+.h-32 {
+  height: 8rem;
+}
+
+.h-36 {
+  height: 9rem;
 }
 
 .h-4 {
@@ -1067,10 +1075,6 @@ button,
 
 .h-40 {
   height: 10rem;
-}
-
-.h-44 {
-  height: 11rem;
 }
 
 .h-5 {
@@ -1087,10 +1091,6 @@ button,
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.w-10 {
-  width: 2.5rem;
 }
 
 .w-12 {
@@ -1113,8 +1113,8 @@ button,
   width: 1.5rem;
 }
 
-.w-64 {
-  width: 16rem;
+.w-8 {
+  width: 2rem;
 }
 
 .w-auto {
@@ -1645,6 +1645,10 @@ button,
   color: rgb(189 238 208 / var(--tw-text-opacity));
 }
 
+.text-text-dark\/70 {
+  color: rgb(189 238 208 / 0.7);
+}
+
 .text-text-dark\/80 {
   color: rgb(189 238 208 / 0.8);
 }
@@ -1824,9 +1828,73 @@ button,
   --tw-ring-offset-width: 2px;
 }
 
+@media (min-width: 640px) {
+  .sm\:inline {
+    display: inline;
+  }
+
+  .sm\:h-24 {
+    height: 6rem;
+  }
+
+  .sm\:h-28 {
+    height: 7rem;
+  }
+
+  .sm\:h-40 {
+    height: 10rem;
+  }
+
+  .sm\:h-44 {
+    height: 11rem;
+  }
+
+  .sm\:w-10 {
+    width: 2.5rem;
+  }
+
+  .sm\:w-auto {
+    width: auto;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:min-h-screen {
+    min-height: 100vh;
+  }
+
+  .md\:w-64 {
+    width: 16rem;
   }
 
   .md\:max-w-4xl {
@@ -1845,16 +1913,14 @@ button,
     flex-direction: row;
   }
 
-  .md\:items-center {
-    align-items: center;
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
-  .md\:justify-between {
-    justify-content: space-between;
-  }
-
-  .md\:self-auto {
-    align-self: auto;
+  .md\:space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
   }
 
   .md\:p-8 {
@@ -1880,7 +1946,25 @@ button,
     flex-direction: row;
   }
 
+  .lg\:items-center {
+    align-items: center;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+  .lg\:self-auto {
+    align-self: auto;
+  }
+
   .lg\:text-left {
     text-align: left;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
