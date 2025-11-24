@@ -1,7 +1,10 @@
 // tailwind.config.js
 module.exports = {
   darkMode: 'class',
-  content: ["./*.html"], // scans all HTML files in root
+  content: [
+    "./*.html",
+    "./**/*.html",
+  ],
   theme: {
     extend: {
       colors: {

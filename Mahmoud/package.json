@@ -2,7 +2,7 @@
   "name": "stitch_landing_home_owner_a",
   "version": "1.0.0",
   "scripts": {
-  "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  "build": "npx tailwindcss -c tailwind.config.js -i ./src/input.css -o ./dist/output.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",
