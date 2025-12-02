@@ -17,6 +17,10 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/details" element={<Details />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/transactions" element={<Transactions />} />
+
         </Routes>
       </BrowserRouter>
     </div>
