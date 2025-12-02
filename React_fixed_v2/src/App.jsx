@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Details from "./pages/Details";
 import Settings from "./pages/Settings";
 import Transactions from "./pages/Transactions";
+import Transactions from "./pages/Transactions";
 
 
 
