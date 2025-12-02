@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//Mahmoud 
+
 export default function Home() {
   return (
     <div className="min-h-screen w-full bg-transparent text-[#BDEED0] font-display">

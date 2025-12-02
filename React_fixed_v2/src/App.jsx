@@ -24,6 +24,7 @@ export default function App() {
           <Route path="/details" element={<Details />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/transactions" element={<Transactions />} />
+        
 
         </Routes>
       </BrowserRouter>
