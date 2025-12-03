@@ -1,12 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
-import Details from "./pages/Details";
-import Settings from "./pages/Settings";
 import Transactions from "./pages/Transactions";
+import Settings from "./pages/Settings";
+import Details from "./pages/Details";
+import Login from "./pages/LogIn";
+import Register from "./pages/Register"
+
 
 
 
